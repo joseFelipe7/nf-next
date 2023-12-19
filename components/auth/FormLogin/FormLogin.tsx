@@ -1,8 +1,10 @@
+"use client";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 import { jwtDecode } from "jwt-decode";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import api from "../../../src/plugins/_core/axiosInstance";
 
 import { loginFormSchema } from "./schemas";
@@ -77,9 +79,9 @@ export function FormLogin() {
           <S.InputContainer>
             <InputEmail />
           </S.InputContainer>
-          <S.InputContainer>
+          {/* <S.InputContainer>
             <InputPass />
-          </S.InputContainer>
+          </S.InputContainer> */}
           <S.Subtitle>
             <Link href="/alterar-senha">
               <S.StyledLink>CLIQUE AQUI</S.StyledLink>
